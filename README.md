@@ -6,6 +6,25 @@ It accurately pairs Authenticator Nonces (ANonce from Message 1) with Supplicant
 
 ---
 
+## Requirements
+
+* **Python**: `3.7+`
+* **Scapy**: `scapy==2.7.0`
+
+### Installation
+
+Install `scapy` using `pip`:
+
+```bash
+pip install scapy
+```
+
+### Usage
+```bash
+python parse_cap.py <file.cap> <output.hc22000>
+```
+---
+
 ## Capabilities & Features
 
 * **Hashcat Mode 22000 Compliance**: Generates fully compliant Hashcat 22000 hash lines including full EAPOL headers, zeroed MIC fields, and exact byte alignments.
@@ -15,16 +34,3 @@ It accurately pairs Authenticator Nonces (ANonce from Message 1) with Supplicant
 * **Automatic ESSID Resolution**: Maps BSSIDs to network names (ESSIDs) by scanning 802.11 Beacon and Probe Response frames in the capture file.
 * **Deduplication**: Automatically cleans and deduplicates output hash lines before saving.
 
----
-
-## Requirements
-
-* **Python**: `3.7+`
-* **Scapy**: `2.4+`
-
-### Installation
-
-Install `scapy` using `pip`:
-
-```bash
-pip install scapy
